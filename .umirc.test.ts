@@ -1,3 +1,10 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-17 21:33:41
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-17 23:43:32
+ * @Description: 文件功能描述
+ */
 import { defineConfig } from 'umi';
 import path from 'path';
 import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';
@@ -11,11 +18,11 @@ const { BUILD_ENV = 'test' } = process.env; // package.json脚本配置的配置
 
 type BuildConfig = keyof typeof buildConfig;
 export default defineConfig({
-    externals: {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-    },
-    devtool: 'false', // 禁用 sourcemap,增量编译提速
+    // externals: {
+    //     react: 'React',
+    //     'react-dom': 'ReactDOM',
+    // },
+    devtool: 'cheap-module-source-map', // 禁用 sourcemap,增量编译提速
     define: {
         'process.env.BUILD_ENV': 'test',
     },
@@ -25,10 +32,10 @@ export default defineConfig({
     dynamicImport: {
         loading: '@/components/loading',
     },
-    scripts: [
-        '//gw.alipayobjects.com/os/lib/react/16.13.1/umd/react.development.js',
-        '//gw.alipayobjects.com/os/lib/react-dom/16.13.1/umd/react-dom.development.js',
-    ],
+    // scripts: [
+    //     '//gw.alipayobjects.com/os/lib/react/16.13.1/umd/react.development.js',
+    //     '//gw.alipayobjects.com/os/lib/react-dom/16.13.1/umd/react-dom.development.js',
+    // ],
     publicPath: buildConfig[BUILD_ENV as BuildConfig] && buildConfig[BUILD_ENV as BuildConfig].publicPath, // 编译打包静态资源路径
     history: {
         type: 'hash',

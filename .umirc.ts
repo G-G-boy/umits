@@ -1,3 +1,10 @@
+/*
+ * @Author: huangxingyuan
+ * @Date: 2021-01-17 21:33:41
+ * @LastEditors: huangxingyuan
+ * @LastEditTime: 2021-01-18 18:45:48
+ * @Description: 文件功能描述
+ */
 import { defineConfig } from 'umi';
 import path from 'path';
 import AntdDayjsWebpackPlugin from 'antd-dayjs-webpack-plugin';

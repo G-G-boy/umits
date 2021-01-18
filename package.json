@@ -3,9 +3,9 @@
   "scripts": {
     "start": "BUILD_ENV=dev umi dev",
     "build": "COMPRESS=none  ANALYZE=1 umi build",
-    "build:test": "BUILD_ENV=test ANALYZE=1 HTML=none umi build",
-    "build:pre": "BUILD_ENV=pre HTML=none ANALYZE=1 umi build",
-    "build:pro": "BUILD_ENV=pro HTML=none ANALYZE=1 umi build",
+    "build:test": "BUILD_ENV=test ANALYZE=1 HTML=none UMI_ENV=test umi build",
+    "build:pre": "BUILD_ENV=pre HTML=none ANALYZE=1 UMI_ENV=pre umi build",
+    "build:pro": "BUILD_ENV=pro HTML=none ANALYZE=1 UMI_ENV=pro umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
