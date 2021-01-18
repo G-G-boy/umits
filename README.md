@@ -1,18 +1,18 @@
-# use
 
-* npm
+
+# use
 ```
 npm install umits -g
 umits init // umits i
 
 ```
-* 当前版本
+# 当前版本
 ```
 1.0.1
 
 
 ```
- ####  已有功能
+ # 已有功能
 - [x]  菜单配置化
 - [x]  代码规范：统一eslint，stylelint,commit信息强制校验
 - [x]  封装axios，统一取消请求cancel方法,组件卸载取消当前页面所有请求HOC
